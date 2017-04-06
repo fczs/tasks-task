@@ -1,0 +1,98 @@
+.btn {
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.tasks {
+  background-color: #fff;
+  border-radius: $border-radius-large;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.add-task {
+  width: 100%;
+  border-radius: $border-radius-large $border-radius-large 0 0;
+
+  span {
+    font-size: 21px;
+    line-height: 1;
+  }
+}
+
+.task.row {
+  padding: 16px 8px 12px;
+  margin: 0;
+}
+
+.task:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.title {
+  position: relative;
+  padding-right: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .edit-task {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+  }
+}
+
+.prop {
+
+  .form-control {
+    height: auto;
+    padding-left: 8px;
+    padding-right: 4px;
+  }
+
+  .btn.disabled {
+    cursor: auto;
+  }
+}
+
+.state-tag {
+  width: 98px;
+}
+
+.tags {
+
+  > * {
+    float: left;
+    margin: $tag-inputs-margin;
+  }
+
+  .input-group {
+    width: 122px;
+    display: table;
+  }
+}
+
+.task-new,
+.add-form {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .priority, .status {
+
+    .btn-group {
+      float: right;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .prop {
+    margin-bottom: 15px;
+  }
+}
